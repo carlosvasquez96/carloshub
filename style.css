@@ -1,0 +1,552 @@
+/* ========================================
+   CarlosHub - Main Styles
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f19;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   Navigation
+======================================== */
+
+.navbar {
+    width: 100%;
+    padding: 22px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 15, 25, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 240px;
+    height: auto;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar nav a {
+    color: #c7cbd6;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   General
+======================================== */
+
+.eyebrow {
+    color: #7aa2ff;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   Homepage - Hero
+======================================== */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 6%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 15, 25, 0.95) 0%,
+            rgba(11, 15, 25, 0.78) 42%,
+            rgba(11, 15, 25, 0.25) 75%,
+            rgba(11, 15, 25, 0.15) 100%
+        ),
+        url("hero-bg.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #7aa2ff;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    color: #aeb4c2;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   Buttons
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.primary {
+    background: #ffffff;
+    color: #0b0f19;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #343b4d;
+    color: #ffffff;
+}
+
+.secondary:hover {
+    background: #171d2b;
+}
+
+
+/* ========================================
+   Homepage - Projects
+======================================== */
+
+.projects-section {
+    padding: 110px 6%;
+
+    background: #101521;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+.section-heading h2,
+.about-section h2,
+.contact-section h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #9fa7b8;
+
+    font-size: 1.05rem;
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 22px;
+}
+
+.project-card {
+    padding: 30px;
+
+    background: #151b29;
+
+    border: 1px solid #252d3d;
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #4f6fbf;
+}
+
+.project-icon {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #9fa7b8;
+
+    margin-bottom: 25px;
+}
+
+.project-link {
+    color: #7aa2ff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.project-link:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   Homepage - About
+======================================== */
+
+.about-section {
+    padding: 120px 6%;
+
+    background: #0b0f19;
+}
+
+.about-content {
+    max-width: 800px;
+}
+
+.about-content p:not(.eyebrow) {
+    color: #aeb4c2;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   Homepage - Contact
+======================================== */
+
+.contact-section {
+    padding: 110px 6%;
+
+    text-align: center;
+
+    background: #101521;
+}
+
+.contact-section p {
+    color: #aeb4c2;
+}
+
+
+/* ========================================
+   Projects Page
+======================================== */
+
+.page-header {
+    padding: 110px 6% 70px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(65, 105, 225, 0.18),
+            transparent 35%
+        );
+}
+
+.page-header h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.page-header > p:last-child {
+    max-width: 650px;
+
+    color: #aeb4c2;
+
+    font-size: 1.15rem;
+}
+
+
+/* ========================================
+   Projects Page - Project List
+======================================== */
+
+.all-projects {
+    padding: 80px 6% 120px;
+
+    background: #101521;
+}
+
+.project-list {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   Projects Page - Large Cards
+======================================== */
+
+.large-project-card {
+    display: flex;
+
+    gap: 35px;
+
+    padding: 40px;
+
+    background: #151b29;
+
+    border: 1px solid #252d3d;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.large-project-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #4f6fbf;
+}
+
+.large-project-card .project-icon {
+    flex-shrink: 0;
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #1d2638;
+
+    border-radius: 14px;
+
+    font-size: 2rem;
+}
+
+.project-content {
+    max-width: 750px;
+}
+
+.project-category {
+    color: #7aa2ff;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.project-content h2 {
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+}
+
+.project-content > p:not(.project-category) {
+    color: #9fa7b8;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 22px;
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+footer {
+    padding: 30px 6%;
+
+    text-align: center;
+
+    color: #737b8c;
+
+    font-size: 0.9rem;
+
+    background: #080b12;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+/* ========================================
+   Mobile / Responsive
+======================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .navbar nav {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 18px;
+    }
+
+    .navbar nav a {
+        font-size: 0.85rem;
+    }
+
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .projects-section,
+    .about-section,
+    .contact-section {
+        padding: 80px 5%;
+    }
+
+
+    .page-header {
+        padding: 80px 5% 50px;
+    }
+
+
+    .all-projects {
+        padding: 60px 5% 80px;
+    }
+
+
+    .large-project-card {
+        flex-direction: column;
+
+        padding: 28px;
+    }
+
+
+
+}
